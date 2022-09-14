@@ -1,0 +1,19 @@
+{
+    "Especialidade": {
+        "type": "object",
+        "properties": {
+            "uuid": {
+                "type": "integer"
+            },
+            "descricao": {
+                "type": "string"
+            },
+            "created": {
+                "type": "string"
+            },
+            "altered": {
+                "type": "string"
+            }
+        }
+    }
+}
