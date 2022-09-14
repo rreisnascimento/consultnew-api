@@ -33,12 +33,14 @@ var swaggerSpec = swaggerJSDoc(options);
 server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // const UsuarioRoutes = require("./routes/UsuarioRoute");
+const PreCadastroProfissionalRoutes = require("./routes/PreCadastroProfissionalRoute")
 const EspecialidadeRoutes = require("./routes/EspecialidadeRoute");
 const EspecialistaRoutes = require("./routes/Especialistas");
 const ProfissionalRoutes = require("./routes/ProfissionalRoute");
 // const ConvenioRoutes = require("./routes/ConvenioRoute");
 
 // server.use("/user", UsuarioRoutes);
+server.use("/precadastro", PreCadastroProfissionalRoutes);
 server.use("/especialidade", EspecialidadeRoutes);
 server.use("/especialista", EspecialistaRoutes);
 server.use("/profissional", ProfissionalRoutes);
