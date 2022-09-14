@@ -4,7 +4,8 @@
   "description": "API de CRUD",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon node src/index.js"
+    "start": "node src/index.js",
+    "test": "nodemon node src/index.js"
   },
   "keywords": [],
   "author": "Rogério Nascimento dos Reis",
