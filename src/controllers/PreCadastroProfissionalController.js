@@ -23,6 +23,18 @@ const create = async (req, res) => {
         })
 }
 
+const all = async (req, res) => {
+    await pgSQL.query('select * from precadastro where aceito=0 order by created', (error, response) => {
+        if (error) { return res.status(500).json({ message: error }) };
+        let dataJSON = {
+            "rowcCunt": response.rowCount,
+            "data": response.rows
+        }        
+        return res.status(200).json( dataJSON );
+    });
+}
+
 module.exports = { 
-    create 
+    create,
+    all
 };

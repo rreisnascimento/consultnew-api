@@ -4,5 +4,6 @@ const PreCadastroProfissionalController = require('../controllers/PreCadastroPro
 const ValidationProfissional = require('../middlewares/ValidationProfissional');
 
 RouterPreCadastroProfissional.post('/create', ValidationProfissional, PreCadastroProfissionalController.create);
+RouterPreCadastroProfissional.get('/all', PreCadastroProfissionalController.all);
 
 module.exports = RouterPreCadastroProfissional;
