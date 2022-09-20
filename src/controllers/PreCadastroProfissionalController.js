@@ -2,8 +2,8 @@ const pgSQL = require("../config/dbConnectionPG");
 const adfunc = require("../utils/utilsfunc");
 
 const create = async (req, res) => {
-    console.log("Dados chegando: " + req.body);
-    return res.status(200).json({ message: req.body });
+    console.dir(req.body);
+    return res.status(200).json( req.body );
     // const sql = `insert into precadastro 
     //                 (uuid, nome, especialidade, endereco, complemento, bairro, cidade, uf, created, aceito) 
     //             values ($1, $2, $3, $4, $5, $6, $7, $8, now(), 0)`;
