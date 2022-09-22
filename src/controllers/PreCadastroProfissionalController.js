@@ -6,7 +6,7 @@ const adfunc = require("../utils/utilsfunc");
 const create = async (req, res) => {
     const sql = `insert into precadastro 
                     (uuid, nome, clinica, especialidade, cep, endereco, complemento, bairro, cidade, uf, 
-                     comercial, celular, email, created, aceito) 
+                     fonecomercial, fonecelular, email, created, aceito) 
                 values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, now(), 0)`;
    
     const values = [
