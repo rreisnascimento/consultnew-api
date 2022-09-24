@@ -26,8 +26,14 @@ const create = async (req, res) => {
 
     await pgSQL.query(sql, values,
         (error) => {
-            if (error) { return res.status(500).json({ message: error }) }
-            return res.status(201).json({ message: "Pré Cadastro realizado com Sucesso!"})
+            if (error) { return res.status(500).json({ 
+                status: 500,
+                message: error 
+            }) }
+            return res.status(201).json({ 
+                status: 201,
+                message: "Pré Cadastro realizado com Sucesso!"
+            })
         })
 }
 

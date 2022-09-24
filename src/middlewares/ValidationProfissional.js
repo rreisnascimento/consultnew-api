@@ -2,9 +2,15 @@ const ValidationProfissional = (req, res, next) => {
     const { nome, endereco } = req.body;
     
     if (!nome)
-        return res.status(400).json({ message: "Nome do Profissional Obrigatório!" })
+        return res.status(400).json({ 
+            status: 400,
+            message: "Nome do Profissional Obrigatório!" 
+        })
     else if (!endereco)
-        return res.status(400).json({ message: "Endereço do Profissional Obrigatório!" })
+        return res.status(400).json({ 
+            status: 400,
+            message: "Endereço do Profissional Obrigatório!" 
+        })
     // else if (!clinica)
     //     return res.status(400).json({ message: "Nome da Clinica Obrigatório!" })
     // else if (!especialidade)
