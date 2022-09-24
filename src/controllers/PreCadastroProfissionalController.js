@@ -1,8 +1,6 @@
 const pgSQL = require("../config/dbConnectionPG");
 const adfunc = require("../utils/utilsfunc");
 
-// comercial, celular, email
-
 const create = async (req, res) => {
     const sql = `insert into precadastro 
                     (uuid, nome, clinica, especialidade, cep, endereco, complemento, bairro, cidade, uf, 

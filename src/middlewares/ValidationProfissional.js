@@ -1,5 +1,5 @@
 const ValidationProfissional = (req, res, next) => {
-    const { nome, endereco } = req.body;
+    const { nome, especialidade, endereco } = req.body;
     
     if (!nome)
         return res.status(400).json({ 
